@@ -1,14 +1,14 @@
 import LibraryItem from "@/models/LibraryItem";
 
-function LibraryCollection(){
+function LibraryCollection() {
     let arr = [];
 
-    arr.addItem = function(item){
+    arr.addItem = function (item) {
         this.push(new LibraryItem(item));
 
         return this; // allows for chaining
     }
-
+    console.log('arr: ', arr);
     return arr;
 }
 

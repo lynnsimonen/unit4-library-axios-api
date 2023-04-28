@@ -11,9 +11,10 @@
 </template>
 
 <script>
+import SongDetails from "@/components/SongDetails.vue";
 export default {
   name: "LibraryItemCard",
-  components: {SongDetails, FeatureMovieDetails},
+  components: {SongDetails},
   props: {
     item: {type: Object}
   },
