@@ -45,10 +45,10 @@ export default {
       searching: true,
     }
   },
-  created() {    //this will list api on load instead of waiting for button click
-    //this.getLibrary()   //TODO: remove when using searchTerm
-    this.searchItunes()
-  },
+  // created() {    //this will list api on load instead of waiting for button click
+  //   //this.getLibrary()   //TODO: remove when using searchTerm
+  //   this.searchItunes()
+  // },
   methods: {
     clearResults() {
       this.searchResults = new ItunesLibraryCollection();
