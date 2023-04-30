@@ -2,9 +2,9 @@ import ItunesLibraryCollection from "@/models/ItunesLibraryCollection";
 import {FeatureMovie, Song, TVEpisode, Podcast, Audiobook} from "@/models/Media";
 
 class ItunesCollectionFactory {
-    static createFromItunes(search) {
-        const collection = new ItunesLibraryCollection();
-        search.forEach(item => {
+    static createFromItunes(libraryArray) {
+        this.collection = new ItunesLibraryCollection();
+        libraryArray.forEach(item => {
             let newItem = false;
             if (item.kind) {
                 switch (item.kind.toLowerCase()) {
@@ -26,13 +26,15 @@ class ItunesCollectionFactory {
                         break;
                 }
                 if (newItem) {
-                    collection.add(newItem);
+                    this.collection.add(newItem);
                 }
             }
             else
                 console.log('item found without item.results.kind tag')
         })
-        return collection;
+        console.log('collection:'+ this.collection)
+        return this.collection;
+
     }
     static createFromLocalStorage(items){
         return this.createFromItunes(items);

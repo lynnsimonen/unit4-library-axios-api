@@ -1,7 +1,7 @@
 <template>
   <div class="song">
     <h3 class="card-title">{{item.artistName}}</h3>
-    <p class="card-text">Pages: {{item.collectionName}}</p>
+    <p class="card-text">Collection Name: {{item.collectionName}}</p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import {Song} from "@/models/Media";
 
 export default {
-  name: "SongDetails",
+  name: "songDetails",
   props: {
     item: {type: Song}
   },

@@ -8,7 +8,7 @@ function LibraryCollection() {
 
         return this; // allows for chaining
     }
-    console.log('arr: ', arr);
+    console.log('this: ', this);
     return arr;
 }
 

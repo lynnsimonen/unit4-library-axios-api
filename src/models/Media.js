@@ -82,9 +82,9 @@ class Song {
     static type = 'Song';
 
     // define type using getter so it is not modifiable
-    get type(){
-        return Song.type;
-    }
+    // get type(){
+    //     return Song.type;
+    // }
 
     kind = '';
     artistId = 0;
@@ -127,6 +127,7 @@ class Song {
         return this.artworkUrl100?.artworkUrl60?.replace('&edge=curl', '');
     }
 }
+Song.type = "Song";
 
 class TVEpisode {
     static type = 'TVEpisode';
